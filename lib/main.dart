@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './src/provider/cyber_news_provider.dart';
 
 void main() => runApp(MyApp());
 
@@ -59,6 +60,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    CyberNewsProvider cyberNewsProvider = CyberNewsProvider();
+    cyberNewsProvider.fetchCyberNews();
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
